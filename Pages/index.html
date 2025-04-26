@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Style/style.css" />
+    <title>E-Commerce</title>
+    <script
+      src="https://kit.fontawesome.com/c7a110cfc2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>E-Shop Nak</h1>
+      <nav>
+        <div class="home-btn-wrapper">
+          <svg
+            class="home-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 576 512"
+            fill="black"
+            3333333333333
+            stroke="currentColor"
+            stroke-width="32"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M288 32L32 288h64v160a32 32 0 0 0 32 32h96V320h128v160h96a32 32 0 0 0 32-32V288h64L288 32z"
+            />
+          </svg>
+        </div>
+        <div class="search-wrapper">
+          <div class="searchbar">
+            <input type="text" class="searchbar-input" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass search-btn"></i>
+          </div>
+        </div>
+        <div class="nav-features">
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-cart-shopping fa-solid">
+            <span class="cart-shopping-number-icon"></span>
+          </i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="sorting-filter-wrapper">
+        <div class="sorting-wrapper">
+          <select name="sort" id="sort" class="sorting-dropdrown-list">
+            <option value="sort">Sorting</option>
+            <option value="name-ascending">Name ⬆</option>
+            <option value="name-descending">Name ⬇</option>
+            <option value="price-ascending">Price ⬆</option>
+            <option value="price-descending">Price ⬇</option>
+          </select>
+        </div>
+        <div class="filters-container"></div>
+      </div>
+      <div class="products-wrapper"></div>
+    </main>
+    <script type="module" src="../src/LoadItems.js"></script>
+    <script type="module" src="../src/productsClass.js"></script>
+    <script type="module" src="../src/Filter.js"></script>
+    <script type="module" src="../src/Searchbar.js"></script>
+    <script type="module" src="../src/Sorting.js"></script>
+    <script type="module" src="../src/Basket.js"></script>
+    <script type="module" src="../src/Favourites.js"></script>
+  </body>
+</html>

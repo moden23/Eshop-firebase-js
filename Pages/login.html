@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication</title>
+    <link rel="stylesheet" href="../Style/authentication.css" />
+  </head>
+  <body>
+    <main class="authentication-wrapper">
+      <p class="welcome">Welcome</p>
+      <form class="authentication-form">
+        <input
+          type="text"
+          id="email-login"
+          name="email"
+          placeholder="Email Address"
+        />
+        <input
+          type="password"
+          id="password-login"
+          name="password"
+          placeholder="Password"
+        />
+        <input
+          type="submit"
+          id="submit-login"
+          value="Login"
+          class="submit-button"
+        />
+      </form>
+      <p>Don't have an account? <a href="SignUp.html">SignUp</a></p>
+    </main>
+    <script type="module" src="../Firebase/Authentication.js"></script>
+  </body>
+</html>
