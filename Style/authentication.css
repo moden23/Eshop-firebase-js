@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+body {
+  height: 100vh;
+  background-color: #bcf0da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication-wrapper {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0e9f6e;
+  gap: 2rem;
+}
+
+.authentication-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+input {
+  height: 4rem;
+}
+p {
+  font-size: 1.3rem;
+}
+.welcome {
+  font-size: bold;
+  font-size: 2rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: black;
+}
+.submit-button {
+  font-size: 1.5rem;
+}
+.submit-button:hover {
+  cursor: pointer;
+}
