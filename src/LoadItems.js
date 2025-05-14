@@ -7,11 +7,11 @@ const currentLoadedProducts = [];
 let favouritesCopy = [];
 let cartItemsCopy = [];
 let initialItemsCopy = [];
-console.log(sessionStorage);
+
 if (sessionStorage.length > 1) {
   const docId = sessionStorage.getItem("session");
 
-  //Get updated data for each operation user do
+  //Get updated data for each operation(favourite an item,addcart an item) user do
   const unsub = onSnapshot(
     doc(db, "users", docId),
     { includeMetadataChanges: true, source: "cache" },

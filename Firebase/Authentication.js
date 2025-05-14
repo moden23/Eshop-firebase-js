@@ -7,12 +7,10 @@ import {
   signInWithEmailAndPassword,
 } from "./FirebaseInit.js";
 import { products } from "../src/LoadItems.js";
-//na parw user apo signup gia create
-console.log("sd");
 
 const submitRegister = document.querySelector("#submit-register");
 const submitLogin = document.querySelector("#submit-login");
-console.log(products);
+
 function createUser(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
     .then(async (userCredential) => {
