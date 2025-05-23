@@ -14,7 +14,9 @@ import {
   initialItemsCopy,
 } from "./LoadItems.js";
 import { stripeKey } from "../Config/config.js";
-const stripe = Stripe(stripeKey);
+
+const stripe = await Stripe(stripeKey);
+
 const shoppingCartBtn = document.querySelector(".fa-cart-shopping");
 const body = document.querySelector("body");
 const itemsInCartNumberIcon = document.querySelector(
@@ -52,24 +54,26 @@ shoppingCartBtn.addEventListener("click", () => {
     });
     console.log(line_items);
     payoutButton.addEventListener("click", async () => {
-      const clientSecret = await createCheckoutSess;
-      // const response = await fetch("/create-checkout-session", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     line_items: line_items,
-      //   }),
-      // });
-      // console.log(response);
+      const response = await fetch(
+        "http//localhost:8888/.netlify/functions/createCheckoutSession",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            line_items: line_items,
+          }),
+        }
+      );
+      console.log(response);
       // console.log(response.json());
       // const session = await response.json();
 
       // const result = await stripe.redirectToCheckout({ sessionId: session });
-      // if (result.error) {
-      //   console.log(result.error.message);
-      // }
+      if (result.error) {
+        console.log(result.error.message);
+      }
     });
   }
 });

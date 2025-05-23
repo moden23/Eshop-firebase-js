@@ -14,10 +14,10 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
-import { firebaseConfigProtected } from "../Config/config.js";
+import { firebaseCofigProtected } from "../Config/config.js";
 
 const firebaseConfig = {
-  ...firebaseConfigProtected,
+  ...firebaseCofigProtected,
 };
 
 const app = initializeApp(firebaseConfig);
